@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <title>Dennis van Oosterhout</title>
+
+        <style>
+            html {
+                width: 100%;
+                height: 100%;
+            }
+
+            body {
+                background-color: #ececec;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            div.me {
+                position: absolute;
+                width: 30vmin;
+                height: 30vmin;
+                background-image: url("./suited.jpg");
+                background-size: cover;
+                border-radius: 50%;
+                border: 0.5vmin solid black;
+            }
+
+            div.hitbox {
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 70vmin;
+                height: 70vmin;
+            }
+
+            div.hitbox:hover img {
+                animation-play-state: paused;
+            }
+
+            img {
+                position: absolute;
+                cursor: pointer;
+            }
+
+            img[src="./kinect-with-light.svg"] {
+                max-width: 10vmin;
+                max-height: 10vmin;
+                animation: rotateKinect 20s linear infinite;
+            }
+
+            @keyframes rotateKinect {
+                from { transform: rotate(0deg) translateX(30vmin) rotate(0deg); }
+                to   { transform: rotate(360deg) translateX(30vmin) rotate(-360deg); }
+            }
+
+            img[src="./bridge_v2.svg"] {
+                max-width: 6vmin;
+                max-height: 6vmin;
+                animation: rotateBridge 20s linear infinite;
+            }
+
+            @keyframes rotateBridge {
+                from { transform: rotate(0deg) translateX(-30vmin) rotate(0deg); }
+                to   { transform: rotate(360deg) translateX(-30vmin) rotate(-360deg); }
+            }
+
+            img[src="./360-controller.svg"] {
+                max-width: 10vmin;
+                max-height: 10vmin;
+                animation: rotateController 20s linear infinite;
+            }
+
+            @keyframes rotateController {
+                from { transform: rotate(0deg) translateY(-30vmin) rotate(0deg); }
+                to   { transform: rotate(360deg) translateY(-30vmin) rotate(-360deg); }
+            }
+
+            img[src="./smartphone.svg"] {
+                min-width: 7vmin;
+                min-height: 7vmin;
+                max-width: 7vmin;
+                max-height: 7vmin;
+                animation: rotateSmartphone 20s linear infinite;
+            }
+
+            @keyframes rotateSmartphone {
+                from { transform: rotate(0deg) translateY(30vmin) rotate(0deg); }
+                to   { transform: rotate(360deg) translateY(30vmin) rotate(-360deg); }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="me"></div>
+        <div class="hitbox">
+                <img src="./kinect-with-light.svg" />
+                <img src="./bridge_v2.svg" />
+                <img src="./360-controller.svg" />
+                <img src="./smartphone.svg" />
+        </div>
+
+        
+    </body>
+</html>
+
+<!--
+    kinect
+    <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+
+    phone
+    <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+
+    cardboard
+    <text x="0" y="56.9" fill="#000000" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">Created by Nick Bluth</text><text x="0" y="61.9" fill="#000000" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">from the Noun Project</text>
+
+    360 controller
+    <text x="0" y="90" fill="#000000" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">Created by Lloyd Humphreys</text><text x="0" y="95" fill="#000000" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">from the Noun Project</text>
+
+-->
