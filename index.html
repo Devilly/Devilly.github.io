@@ -1,109 +1,78 @@
-<html>
-    <head>
-        <title>Dennis van Oosterhout</title>
+<!DOCTYPE html>
 
-        <style>
-            html {
-                width: 100%;
-                height: 100%;
-            }
+<title>Dennis van Oosterhout</title>
 
-            body {
-                background-color: #ececec;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
+<style>
+  :root {
+    font-family: Arial;
+    color: #000000;
+  }
 
-            a.me {
-                width: 30vmin;
-                height: 30vmin;
-                background-image: url("./suited.jpg");
-                background-size: cover;
-                border-radius: 50%;
-                border: 0.5vmin solid black;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                user-select: none;
-            }
+  html {
+    width: 100%;
+    height: 100%;
+  }
 
-            img {
-                position: absolute;
-                user-select: none;
-            }
+  body {
+    background-color: #ececec;
+    padding: 1em;
+  }
 
-            img[src="./kinect-with-light.svg"] {
-                max-width: 10vmin;
-                max-height: 10vmin;
-                animation: rotateKinect 20s linear infinite;
-            }
+  div.image {
+    width: 7em;
+    height: 7em;
+    background-image: url("./suited.jpg");
+    background-size: cover;
+    border-radius: 50%;
+    border: 0.15em solid black;
+    user-select: none;
+  }
 
-            @keyframes rotateKinect {
-                from { transform: rotate(0deg) translateX(30vmin) rotate(0deg); }
-                to   { transform: rotate(360deg) translateX(30vmin) rotate(-360deg); }
-            }
+  div.name,
+  div.certificates,
+  div.experiences {
+    font-weight: bold;
+    margin-top: 2em;
+    margin-bottom: 1em;
+  }
 
-            img[src="./bridge_v2.svg"] {
-                max-width: 6vmin;
-                max-height: 6vmin;
-                animation: rotateBridge 20s linear infinite;
-            }
+  a.certificate,
+  div.certificate {
+    display: block;
+    text-decoration: none;
+  }
 
-            @keyframes rotateBridge {
-                from { transform: rotate(0deg) translateX(-30vmin) rotate(0deg); }
-                to   { transform: rotate(360deg) translateX(-30vmin) rotate(-360deg); }
-            }
+  a.certificate.extra::before,
+  div.certificate.extra::before {
+    content: "> "
+  }
 
-            img[src="./360-controller.svg"] {
-                max-width: 10vmin;
-                max-height: 10vmin;
-                animation: rotateController 20s linear infinite;
-            }
+  div.experience {
+    margin-top: 1em;
+  }
+</style>
 
-            @keyframes rotateController {
-                from { transform: rotate(0deg) translateY(-30vmin) rotate(0deg); }
-                to   { transform: rotate(360deg) translateY(-30vmin) rotate(-360deg); }
-            }
+<div class="image"></div>
 
-            img[src="./smartphone.svg"] {
-                min-width: 7vmin;
-                min-height: 7vmin;
-                max-width: 7vmin;
-                max-height: 7vmin;
-                animation: rotateSmartphone 20s linear infinite;
-            }
+<div class="name">Dennis van Oosterhout</div>
+<div class="role">Software Engineer</div>
+<div class="role">Software Architect</div>
 
-            @keyframes rotateSmartphone {
-                from { transform: rotate(0deg) translateY(30vmin) rotate(0deg); }
-                to   { transform: rotate(360deg) translateY(30vmin) rotate(-360deg); }
-            }
-        </style>
-    </head>
+<div class="certificates">Certificates</div>
+<a class="certificate" href="togaf9-1.pdf">TOGAF® 9 Certified</a>
+<div class="certificate">TOGAF® 9 Foundation</div>
+<a class="certificate" href="tmap.pdf">TMap NEXT Test Engineer</a>
+<a class="certificate" href="cloud-computing-foundation.pdf">Cloud Computing Foundation</a>
+<div class="certificate">Agile Foundation</div>
+<a class="certificate" href="information-security-foundation.pdf">Information Security Foundation</a>
+<a class="certificate" href="Certificate_2.pdf">Programming in HTML5 with JavaScript and CSS3</a>
+<a class="certificate extra" href="Certificate_1.pdf">Microsoft Certified Professional</a>
+<a class="certificate" href="java-jpa.pdf">Oracle Certified Expert, Java EE 6 Java Persistence API Developer</a>
+<a class="certificate" href="java-web-component.pdf">Oracle Certified Professional, Java EE 5 Web Component
+  Developer</a>
+<a class="certificate" href="java-se6.pdf">Oracle Certified Professional, Java SE 6 Programmer</a>
 
-    <body>
-        <a href="https://github.com/Devilly/dev-blog/blob/master/README.md" class="me">
-            <img src="./kinect-with-light.svg" />
-            <img src="./bridge_v2.svg" />
-            <img src="./360-controller.svg" />
-            <img src="./smartphone.svg" />
-        </div>
-
-        
-    </body>
-</html>
-
-<!--
-    kinect
-    <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
-
-    phone
-    <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
-
-    cardboard
-    <text x="0" y="56.9" fill="#000000" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">Created by Nick Bluth</text><text x="0" y="61.9" fill="#000000" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">from the Noun Project</text>
-
-    360 controller
-    <text x="0" y="90" fill="#000000" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">Created by Lloyd Humphreys</text><text x="0" y="95" fill="#000000" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">from the Noun Project</text>
-
--->
+<div class="experiences">Experience</div>
+<div class="experience">Juni 2017 - Present;<br>Software Engineer/Architect, PwC</div>
+<div class="experience">Januari 2015 - May 2017;<br>Senior Software Engineer, Sogeti Netherlands</div>
+<div class="experience">July 2012 - December 2014;<br>Software Engineer, Sogeti Netherlands</div>
