@@ -48,17 +48,40 @@
   }
 
   div.experience {
-    margin-top: 1em;
+    margin-bottom: 2em;
+  }
+
+  div.experience > div.time::after {
+    content: ";"
+  }
+
+  div.experience > div.description {
+    margin-top: .5em;
+  }
+
+  div.tags {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  div.tag {
+    background-color: rgb(218, 218, 218);
+    padding: .5em;
+    border-radius: 10%;
+    margin-top: .2em;
+    margin-right: .2em;
   }
 </style>
 
 <div class="image"></div>
 
 <div class="name">Dennis van Oosterhout</div>
+
 <div class="role">Software Engineer</div>
 <div class="role">Software Architect</div>
 
 <div class="certificates">Certificates</div>
+
 <a class="certificate" href="togaf9-1.pdf">TOGAF® 9 Certified</a>
 <div class="certificate">TOGAF® 9 Foundation</div>
 <a class="certificate" href="tmap.pdf">TMap NEXT Test Engineer</a>
@@ -73,6 +96,60 @@
 <a class="certificate" href="java-se6.pdf">Oracle Certified Professional, Java SE 6 Programmer</a>
 
 <div class="experiences">Experience</div>
-<div class="experience">Juni 2017 - Present;<br>Software Engineer/Architect, PwC</div>
-<div class="experience">Januari 2015 - May 2017;<br>Senior Software Engineer, Sogeti Netherlands</div>
-<div class="experience">July 2012 - December 2014;<br>Software Engineer, Sogeti Netherlands</div>
+
+<div class="experience">
+  <div class="time">Juni 2017 - Present</div>
+  <div class="title">Software Engineer/Architect, PwC</div>
+
+  <div class="description">
+    Got the chance to start a project from scratch being the lead engineer and architect in one.
+  </div>
+
+  <div class="tags">
+    <div class="tag">Java</div>
+    <div class="tag">JavaScript</div>
+    <div class="tag">TypeScript</div>
+    <div class="tag">Python</div>
+    <div class="tag">React</div>
+    <div class="tag">Redis</div>
+    <div class="tag">RabbitMQ</div>
+    <div class="tag">Docker</div>
+    <div class="tag">Kubernetes</div>
+    <div class="tag">Selenium</div>
+  </div>
+</div>
+
+<div class="experience">
+  <div class="time">Januari 2015 - May 2017</div>
+  <div class="title">Senior Software Engineer, Sogeti Netherlands</div>
+
+  <div class="description">
+    Full-stack developer with a bit more focus on the frontend than the backend. Worked on a single project, a web application with a JavaScript frontend, Java backend with Drools integration and persistence in MongoDB.
+  </div>
+
+  <div class="tags">
+    <div class="tag">Java</div>
+    <div class="tag">JavaScript</div>
+    <div class="tag">HTML</div>
+    <div class="tag">CSS</div>
+    <div class="tag">LESS</div>
+    <div class="tag">React</div>
+    <div class="tag">MongoDB</div>
+  </div>
+</div>
+
+<div class="experience">
+  <div class="time">July 2012 - December 2014</div>
+  <div class="title">Software Engineer, Sogeti Netherlands</div>
+
+  <div class="description">
+    Backend developer. Worked a lot with Aquima (renamed to Blueriq). Later on got my first experiences with frontend development.
+  </div>
+
+  <div class="tags">
+    <div class="tag">Java</div>
+    <div class="tag">JavaScript</div>
+    <div class="tag">HTML</div>
+    <div class="tag">CSS</div>
+  </div>
+</div>
