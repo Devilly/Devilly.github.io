@@ -6,6 +6,8 @@
   :root {
     font-family: Arial;
     color: #000000;
+    font-size: 21px;
+    text-size-adjust: none;
   }
 
   html {
@@ -18,6 +20,12 @@
     padding: 1em;
   }
 
+  @media print {
+    body {
+      background-color: #ffffff;
+    }
+  }
+
   div.image {
     width: 7em;
     height: 7em;
@@ -28,12 +36,24 @@
     user-select: none;
   }
 
-  div.name,
-  div.certificates,
-  div.experiences {
+  div.header {
     font-weight: bold;
     margin-top: 2em;
     margin-bottom: 1em;
+  }
+
+  div.about > div {
+    margin-bottom: 1em;
+  }
+
+  a.email {
+    text-decoration: none;
+  }
+
+  @media print {
+    a.email {
+      color: #000000;
+    }
   }
 
   a.certificate,
@@ -42,9 +62,10 @@
     text-decoration: none;
   }
 
-  a.certificate.extra::before,
-  div.certificate.extra::before {
-    content: "> "
+  @media print {
+    a.certificate {
+      color: #000000;
+    }
   }
 
   div.experience {
@@ -75,12 +96,48 @@
 
 <div class="image"></div>
 
-<div class="name">Dennis van Oosterhout</div>
+<div class="header">Dennis van Oosterhout</div>
 
 <div class="role">Software Engineer</div>
 <div class="role">Software Architect</div>
 
-<div class="certificates">Certificates</div>
+<div class="header">Introduction</div>
+
+<div class="about">
+  <div>
+    I've always liked physical challenging hobbies. Gymnastics, swimming, triathlon, fitness, weight training, running, biking, hiking and golf. Some of those were and are "mere" hobbies, others at times were a way of life.
+  </div>
+
+  <div>
+    At the other end of the spectrum of my interests is software development. Here my body can relax and my mind needs to perform to the best of its abilities. While doing software development for a living I also like to tinker around with software at home. At work I prefer to use the right tools for the right job, at home I enjoy playing around with the newest technologies and just poking around in all the cool stuff that's available.
+  </div>
+
+  <div>
+    Some facts about me to give an impression of what kind of person I am:
+    <ul>
+      <li>Became Dutch juniors 3/4 open water champion in 2005.</li>
+      <li>Made it to the finish of an IRONMAN 70.3 in 2015.</li>
+      <li>Volunteered as family companion for Stichting Opkikker.</li>
+      <li>Acted as head coach of a group of competitive swimmers.</li>
+      <li>Trained a group of test engineers to learn Java.</li>
+      <li>Made it to the finish of the Nijmeegse Vierdaagse in 2019.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="header">Contact</div>
+
+<a href="" class="email" data-email-address="ZHYub29zdGVyaG91dC5kZXZlbG9wbWVudEBnbWFpbC5jb20="></a>
+
+<script>
+  const emailContainer = document.querySelector('.email');
+  const emailAddressEncoded = emailContainer.getAttribute('data-email-address');
+  const emailAddressDecoded = atob(emailAddressEncoded);
+  emailContainer.innerHTML = emailAddressDecoded;
+  emailContainer.setAttribute('href', `mailto:${emailAddressDecoded}`);
+</script>
+
+<div class="header">Certificates</div>
 
 <a class="certificate" href="togaf9-1.pdf">TOGAF® 9 Certified</a>
 <div class="certificate">TOGAF® 9 Foundation</div>
@@ -89,20 +146,20 @@
 <div class="certificate">Agile Foundation</div>
 <a class="certificate" href="information-security-foundation.pdf">Information Security Foundation</a>
 <a class="certificate" href="Certificate_2.pdf">Programming in HTML5 with JavaScript and CSS3</a>
-<a class="certificate extra" href="Certificate_1.pdf">Microsoft Certified Professional</a>
+<a class="certificate" href="Certificate_1.pdf">Microsoft Certified Professional</a>
 <a class="certificate" href="java-jpa.pdf">Oracle Certified Expert, Java EE 6 Java Persistence API Developer</a>
 <a class="certificate" href="java-web-component.pdf">Oracle Certified Professional, Java EE 5 Web Component
   Developer</a>
 <a class="certificate" href="java-se6.pdf">Oracle Certified Professional, Java SE 6 Programmer</a>
 
-<div class="experiences">Experience</div>
+<div class="header">Experience</div>
 
 <div class="experience">
   <div class="time">Juni 2017 - Present</div>
   <div class="title">Software Engineer/Architect, PwC</div>
 
   <div class="description">
-    Got the chance to start a project from scratch being the lead engineer and architect in one.
+    Got the chance to start a project from scratch being the lead engineer and architect. The application revolves around the idea that a single software platform can contain all business data and logic, regardless of its format or complexity.
   </div>
 
   <div class="tags">
@@ -116,6 +173,10 @@
     <div class="tag">Docker</div>
     <div class="tag">Kubernetes</div>
     <div class="tag">Selenium</div>
+    <div class="tag">SQL</div>
+    <div class="tag">SQLite</div>
+    <div class="tag">REST</div>
+    <div class="tag">GraphQL</div>
   </div>
 </div>
 
@@ -124,7 +185,7 @@
   <div class="title">Senior Software Engineer, Sogeti Netherlands</div>
 
   <div class="description">
-    Full-stack developer with a bit more focus on the frontend than the backend. Worked on a single project, a web application with a JavaScript frontend, Java backend with Drools integration and persistence in MongoDB.
+    Full-stack developer with a bit more focus on the frontend than the backend. Worked on a web application which can be used to create diagrams. These diagrams represent company structures and can be used for visual presentations but also a broad spectrum of financial calculations.
   </div>
 
   <div class="tags">
@@ -135,6 +196,7 @@
     <div class="tag">LESS</div>
     <div class="tag">React</div>
     <div class="tag">MongoDB</div>
+    <div class="tag">REST</div>
   </div>
 </div>
 
