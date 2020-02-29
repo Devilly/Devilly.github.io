@@ -8,6 +8,8 @@
     color: #000000;
     font-size: 21px;
     text-size-adjust: none;
+
+    --attention-grey: #dadada;
   }
 
   html {
@@ -86,7 +88,7 @@
   }
 
   div.tag {
-    background-color: #dadada;
+    background-color: var(--attention-grey);
     padding: .5em;
     border-radius: 10%;
     margin-top: .2em;
@@ -96,7 +98,7 @@
   div.footer {
     margin-top: 1em;
     padding-top: 1em;
-    border-top: 1px solid #dadada;
+    border-top: 1px solid var(--attention-grey);
     margin-top: 1em;
     font-size: .7em;
     font-style: italic;
