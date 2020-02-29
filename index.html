@@ -125,18 +125,6 @@
   </div>
 </div>
 
-<div class="header">Contact</div>
-
-<a href="" class="email" data-email-address="ZHYub29zdGVyaG91dC5kZXZlbG9wbWVudEBnbWFpbC5jb20="></a>
-
-<script>
-  const emailContainer = document.querySelector('.email');
-  const emailAddressEncoded = emailContainer.getAttribute('data-email-address');
-  const emailAddressDecoded = atob(emailAddressEncoded);
-  emailContainer.innerHTML = emailAddressDecoded;
-  emailContainer.setAttribute('href', `mailto:${emailAddressDecoded}`);
-</script>
-
 <div class="header">Certificates</div>
 
 <a class="certificate" href="togaf9-1.pdf">TOGAF® 9 Certified</a>
@@ -215,3 +203,15 @@
     <div class="tag">CSS</div>
   </div>
 </div>
+
+<div class="header">Contact</div>
+
+<a href="" class="email" data-email-address="ZHYub29zdGVyaG91dC5kZXZlbG9wbWVudEBnbWFpbC5jb20="></a>
+
+<script>
+  const emailContainer = document.querySelector('.email');
+  const emailAddressEncoded = emailContainer.getAttribute('data-email-address');
+  const emailAddressDecoded = atob(emailAddressEncoded);
+  emailContainer.innerHTML = emailAddressDecoded;
+  emailContainer.setAttribute('href', `mailto:${emailAddressDecoded}`);
+</script>
