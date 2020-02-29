@@ -86,11 +86,27 @@
   }
 
   div.tag {
-    background-color: rgb(218, 218, 218);
+    background-color: #dadada;
     padding: .5em;
     border-radius: 10%;
     margin-top: .2em;
     margin-right: .2em;
+  }
+
+  div.footer {
+    margin-top: 1em;
+    padding-top: 1em;
+    border-top: 1px solid #dadada;
+    margin-top: 1em;
+    font-size: .7em;
+    font-style: italic;
+    display: none;
+  }
+
+  @media print {
+    div.footer {
+      display: block;
+    }
   }
 </style>
 
@@ -215,3 +231,7 @@
   emailContainer.innerHTML = emailAddressDecoded;
   emailContainer.setAttribute('href', `mailto:${emailAddressDecoded}`);
 </script>
+
+<div class="footer">
+  Please visit https://devilly.github.io for the latest version of this curriculum vitae.
+</div>
