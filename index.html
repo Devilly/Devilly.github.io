@@ -78,6 +78,14 @@
     content: ";"
   }
 
+  div.experience > div.finePrint {
+    margin-top: .5em;
+  }
+
+  div.experience > div.finePrint::before {
+    content: "→ ";
+  }
+
   div.experience > div.description {
     margin-top: .5em;
   }
@@ -123,22 +131,16 @@
 
 <div class="about">
   <div>
-    I've always liked physically challenging hobbies. Gymnastics, swimming, triathlon, fitness, weight training, running, biking, hiking and golf. Some of those were and are "mere" hobbies, others at times were a way of life.
-  </div>
-
-  <div>
-    At the other end of the spectrum of my interests is software development. Here my body can relax and my mind needs to perform to the best of its abilities. While doing software development for a living I also like to tinker around with software at home. At work I prefer to use the right tools for the right job, at home I enjoy playing around with the newest technologies and just poking around in all the cool stuff that's available.
+    While doing software development for a living I also like to tinker around with software at home. At work I prefer to use the right tools for the right job, at home I enjoy playing around with the newest technologies and just poking around in all the cool stuff that's available.
   </div>
 
   <div>
     Some facts about me to give an impression of what kind of person I am:
     <ul>
-      <li>Became Dutch juniors 3/4 open water champion in 2005.</li>
-      <li>Made it to the finish of an IRONMAN 70.3 in 2015.</li>
-      <li>Volunteered as family companion for Stichting Opkikker.</li>
-      <li>Acted as head coach of a group of competitive swimmers.</li>
-      <li>Trained a group of test engineers to learn Java.</li>
-      <li>Made it to the finish of the Nijmeegse Vierdaagse in 2019.</li>
+      <li>Love to sport.</li>
+      <li>Enjoy teaching.</li>
+      <li>Did some charity.</li>
+      <li>Needs a challenge.</li>
     </ul>
   </div>
 </div>
@@ -189,6 +191,7 @@
 <div class="experience">
   <div class="time">Januari 2015 - May 2017</div>
   <div class="title">Senior Software Engineer, Sogeti Netherlands</div>
+  <div class="finePrint">Secondment to PwC</div>
 
   <div class="description">
     Full-stack developer with a bit more focus on the frontend than the backend. Worked on a web application which can be used to create diagrams. These diagrams represent company structures and can be used for visual presentations but also a broad spectrum of financial calculations.
@@ -209,6 +212,7 @@
 <div class="experience">
   <div class="time">July 2012 - December 2014</div>
   <div class="title">Software Engineer, Sogeti Netherlands</div>
+  <div class="finePrint">Secondments to Nationale-Nederlanden, PwC</div>
 
   <div class="description">
     Backend developer. Worked a lot with Aquima (renamed to Blueriq). Later on got my first experiences with frontend development.
