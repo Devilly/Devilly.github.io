@@ -10,6 +10,7 @@
     text-size-adjust: none;
 
     --attention-grey: #dadada;
+    --indent-sign: "→ ";
   }
 
   html {
@@ -76,12 +77,21 @@
     content: ";"
   }
 
-  div.occupation > div.finePrint {
+  div.occupation > div.detailedActivity {
     margin-top: .5em;
   }
 
-  div.occupation > div.finePrint::before {
-    content: "→ ";
+  div.occupation > div.detailedActivity::before {
+    content: var(--indent-sign);
+  }
+
+  div.occupation > div.detailedActivity::after {
+    content: ",";
+  }
+
+  div.occupation > div.nestedTime::before {
+    content: var(--indent-sign);
+    opacity: 0;
   }
 
   div.occupation > div.description > p {
@@ -161,8 +171,8 @@
 <h2>Experience</h2>
 
 <div class="occupation">
-  <div class="time">Juni 2017 - Present</div>
   <div class="title">Lead Software Engineer, PwC</div>
+  <div class="time">Juni 2017 - Present</div>
 
   <div class="description">
     <p>
@@ -203,9 +213,20 @@
 </div>
 
 <div class="occupation">
-  <div class="time">Januari 2015 - May 2017</div>
   <div class="title">Senior Software Engineer, Sogeti Netherlands</div>
-  <div class="finePrint">Secondment to PwC</div>
+  <div class="time">Januari 2015 - May 2017</div>
+
+  <div class="detailedActivity">Trainer Java</div>
+  <div class="nestedTime">February 2017 - April 2017</div>
+
+  <div class="description">
+    <p>
+      As part of a movement where test engineers were teached to write code I functioned as one of the persons who supervised them in their ambitions to become Oracle Certified Associate, Java SE 8 Programmer.
+    </p>
+  </div>
+
+  <div class="detailedActivity">Secondment to PwC</div>
+  <div class="nestedTime">January 2015 - May 2017</div>
 
   <div class="description">
     <p>
@@ -228,10 +249,11 @@
 </div>
 
 <div class="occupation">
-  <div class="time">July 2012 - December 2014</div>
   <div class="title">Software Engineer, Sogeti Netherlands</div>
+  <div class="time">July 2012 - December 2014</div>
 
-  <div class="finePrint">Secondment to PwC</div>
+  <div class="detailedActivity">Secondment to PwC</div>
+  <div class="nestedTime">November 2013 - December 2014</div>
 
   <div class="description">
     <p>
@@ -245,7 +267,8 @@
     <div class="tag">CSS</div>
   </div>
 
-  <div class="finePrint">Secondment to Nationale-Nederlanden</div>
+  <div class="detailedActivity">Secondment to Nationale-Nederlanden</div>
+  <div class="nestedTime">December 2012 - September 2013</div>
 
   <div class="description">
     <p>
@@ -261,9 +284,10 @@
 <h2>Education</h2>
 
 <div class="occupation">
-  <div class="time">2008 - 2012</div>
   <div class="title">Computer Science</div>
-  <div class="finePrint">Bachelor, Avans Hogeschool</div>
+  <div class="time">2008 - 2012</div>
+
+  <div class="detailedActivity">Bachelor, Avans Hogeschool</div>
 
   <div class="description">
     <ul>
@@ -275,9 +299,10 @@
 </div>
 
 <div class="occupation">
-  <div class="time">2001 - 2007</div>
   <div class="title">Nature & Health</div>
-  <div class="finePrint">Atheneum, Markland College</div>
+  <div class="time">2001 - 2007</div>
+  
+  <div class="detailedActivity">Atheneum, Markland College</div>
 
   <div class="description">
     <ul>
