@@ -32,7 +32,6 @@
   div.portrait {
     width: 7em;
     height: 7em;
-    background-image: url("./suited.jpg");
     background-size: cover;
     border-radius: 50%;
     border: 0.15em solid black;
@@ -351,11 +350,31 @@
 
 <script>
   // Some detour to confuse simple scrapers.
+
   const emailContainer = document.querySelector('.email');
   const emailAddressEncoded = emailContainer.getAttribute('data-email-address');
   const emailAddressDecoded = atob(emailAddressEncoded);
   emailContainer.innerHTML = emailAddressDecoded;
   emailContainer.setAttribute('href', `mailto:${emailAddressDecoded}`);
+</script>
+
+<script>
+  // Show random portrait pictures.
+
+  const portraitElement = document.querySelector('.portrait');
+
+  const profileImages = [{
+    image: 'suited.jpg',
+    position: 'initial'
+   }, {
+    image: 'zell-am-see.jpg',
+    position: '0% 75%'
+   }];
+
+  const imageEntrySpan = 1 / profileImages.length;
+  const chosenImage = profileImages[Math.floor(Math.random() / imageEntrySpan)];
+  portraitElement.style.backgroundImage = `url(${chosenImage.image})`;
+  portraitElement.style.backgroundPosition = chosenImage.position;
 </script>
 
 <footer>
