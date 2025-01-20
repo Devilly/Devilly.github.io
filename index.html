@@ -416,8 +416,6 @@
 </script>
 
 <script>
-  // Show random portrait pictures.
-
   const portraitElement = document.querySelector('.portrait');
 
   const profileImages = [{
@@ -431,8 +429,20 @@
     position: 'initial'
    }];
 
-  const imageEntrySpan = 1 / profileImages.length;
-  const chosenImage = profileImages[Math.floor(Math.random() / imageEntrySpan)];
+  const url = new URL(window.location.href);
+  const params = new URLSearchParams(url.search);
+  const imageIdentifier = params.get('image');
+
+  let chosenImage;
+  if(imageIdentifier) {
+    // Use specified image.
+    chosenImage = profileImages.find(entry => entry.image === imageIdentifier);
+  } else {
+    // Otherwise choose a random image.
+    const imageEntrySpan = 1 / profileImages.length;
+    chosenImage = profileImages[Math.floor(Math.random() / imageEntrySpan)];
+  }
+
   portraitElement.style.backgroundImage = `url(${chosenImage.image})`;
   portraitElement.style.backgroundPosition = chosenImage.position;
 </script>
