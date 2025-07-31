@@ -46,19 +46,12 @@
     font-size: 1em;
   }
 
-  a.email {
-    text-decoration: none;
-  }
-
-  @media print {
-    a.email {
-      color: #000000;
-    }
+  h3 {
+    font-size: .8em;
   }
 
   a.certificate,
   div.certificate {
-    display: block;
     text-decoration: none;
   }
 
@@ -72,25 +65,13 @@
     margin-bottom: 2em;
   }
 
-  div.occupation > div.time::after {
+  div.occupation > div.timeAndPlace {
+    font-size: .9em;
+    font-style: italic;
+  }
+
+  div.occupation > div.timeAndPlace::after {
     content: ";"
-  }
-
-  div.occupation > div.detailedActivity {
-    margin-top: .5em;
-  }
-
-  div.occupation > div.detailedActivity::before {
-    content: var(--indent-sign);
-  }
-
-  div.occupation > div.detailedActivity::after {
-    content: ",";
-  }
-
-  div.occupation > div.nestedTime::before {
-    content: var(--indent-sign);
-    opacity: 0;
   }
 
   div.occupation > div.description > p {
@@ -98,22 +79,14 @@
     margin-bottom: 0em;
   }
 
-  div.tags {
-    display: flex;
-    flex-wrap: wrap;
+  a.email {
+    text-decoration: none;
   }
 
-  div.tag {
-    background-color: var(--attention-grey);
-    padding: .5em;
-    border-radius: 10%;
-    margin-top: .2em;
-    margin-right: .2em;
-  }
-
-  ul {
-    list-style-position: inside;;
-    padding-inline-start: 0em;
+  @media print {
+    a.email {
+      color: #000000;
+    }
   }
 
   footer {
@@ -141,245 +114,130 @@
 
 <h2>About</h2>
 
-<p>Software creation is my profession and at the same time a hobby of mine. I strive to create good (software) solutions for the case at hand. Because of my inherent interest in technology I keep up-to-date with the latest developments and am able to choose the right tool for the right job, which can either be something state of the art or proven over time.</p>
+<p>Software creation is my profession as well as a hobby of mine. I am interested in the vision, implementation and testing of the product at hand.</p>
 <p>When not busy with software I like to watch series and movies, play (board) games, read a bit, do sports, and enjoy time with family and friends.</p>
 
-<p>Some facts about me:</p>
+<h2>Certifications</h2>
 
-<ul>
-  <li>Love to learn.</li>
-  <li>Enjoy teaching.</li>
-  <li>Need a challenge.</li>
-</ul>
+<h3>Agile</h3>
+<a class="certificate" href="Professional Scrum Product Owner I.pdf">Professional Scrum Product Owner I</a>,
+<a class="certificate" href="Professional Scrum Master I.pdf">Professional Scrum Master I</a>,
+<span class="certificate">Agile Foundation</span>
 
-<h2>Certificates</h2>
-
-<a class="certificate" href="Professional Scrum Product Owner I.pdf">Professional Scrum Product Owner I</a>
-<a class="certificate" href="Professional Scrum Master I.pdf">Professional Scrum Master I</a>
-<a class="certificate" href="togaf9-1.pdf">TOGAF® 9 Certified</a>
-<div class="certificate">TOGAF® 9 Foundation</div>
+<h3>Architecture</h3>
+<span class="certificate">TOGAF® 9 Foundation</span>,
+<a class="certificate" href="togaf9-1.pdf">TOGAF® 9 Certified</a>,
+<a class="certificate" href="cloud-computing-foundation.pdf">Cloud Computing Foundation</a>,
+<a class="certificate" href="information-security-foundation.pdf">Information Security Foundation</a>,
 <a class="certificate" href="tmap.pdf">TMap NEXT Test Engineer</a>
-<a class="certificate" href="cloud-computing-foundation.pdf">Cloud Computing Foundation</a>
-<div class="certificate">Agile Foundation</div>
-<a class="certificate" href="information-security-foundation.pdf">Information Security Foundation</a>
-<a class="certificate" href="Certificate_2.pdf">Programming in HTML5 with JavaScript and CSS3</a>
-<a class="certificate" href="Certificate_1.pdf">Microsoft Certified Professional</a>
-<a class="certificate" href="java-jpa.pdf">Oracle Certified Expert, Java EE 6 Java Persistence API Developer</a>
+
+<h3>Programming</h3>
+<a class="certificate" href="Certificate_2.pdf">Programming in HTML5 with JavaScript and CSS3</a>,
+<a class="certificate" href="Certificate_1.pdf">Microsoft Certified Professional</a>,
+<a class="certificate" href="java-jpa.pdf">Oracle Certified Expert, Java EE 6 Java Persistence API Developer</a>,
 <a class="certificate" href="java-web-component.pdf">Oracle Certified Professional, Java EE 5 Web Component
-  Developer</a>
+  Developer</a>,
 <a class="certificate" href="java-se6.pdf">Oracle Certified Professional, Java SE 6 Programmer</a>
 
 <h2>Experience</h2>
 
 <div class="occupation">
-  <div class="title">Senior Product Owner & Team Lead, CM.com</div>
-  <div class="time">January 2024 - Present</div>
+  <div class="title">Senior Product Owner</div>
+  <div class="timeAndPlace">October 2023 - Present | CM.com</div>
 
   <div class="description">
     <p>
-      Product owner and team lead of the Router team. Focus points are:
-      <ul>
-        <li>facilitating collaboration between teams within the CM.com portfolio</li>
-        <li>making sure the team is performing while also looking out for its members</li>
-      </ul>
+      Roadmap development and monitoring for the realtime integrations platform, facilitating technical alignment between teams
     </p>
-
     <p>
-      I'm also improving the aforementioned testing suite. Improvement points are mainly concerned with increasing the stability and extensibility of the code and the investigation and implementation of infrastructure enhancements.
+      Development of an end-to-end testing suite based on Node.js, Playwright and Appium; tests cover and combine frontend, backend and mobile across multiple CM.com applications while metrics are stored to gain insights over time
     </p>
-
-    <div class="tags">
-      <div class="tag">JavaScript</div>
-      <div class="tag">TypeScript</div>
-      <div class="tag">Playwright</div>
-      <div class="tag">PostgreSQL</div>
-      <div class="tag">GitHub</div>
-      <div class="tag">Kubernetes</div>
-    </div>
-  </div>
-</div>
-
-<div class="occupation">
-  <div class="title">Senior Product Owner, CM.com</div>
-  <div class="time">October 2023 - December 2023</div>
-
-  <div class="description">
     <p>
-      Product owner of the Bot & Router team, facilitating collaboration between teams within the CM.com SAAS portfolio.
-    </p>
-
-    <p>
-      Aside from my primary responsibility I worked on an end-to-end testing suite based on Playwright and Appium. It involved testing various parts of the CM.com ecosystem and their respective integrations. The tests were based on automations of frontend interactions, API calls and mobile app usage. Metrics were logged to a database to enable the inspection of (historical) latency.
-    </p>
-
-    <div class="tags">
-      <div class="tag">JavaScript</div>
-      <div class="tag">TypeScript</div>
-      <div class="tag">Playwright</div>
-      <div class="tag">Appium</div>
-      <div class="tag">PostgreSQL</div>
-    </div>
-  </div>
-</div>
-
-<div class="occupation">
-  <div class="title">Product Owner, CM.com</div>
-  <div class="time">May 2022 - September 2023</div>
-
-  <div class="description">
-    <p>
-      Product owner of the Bot & Router team, which delivered products part of the CM.com SAAS portfolio.
+      Notable software: PostgreSQL
     </p>
   </div>
 </div>
 
 <div class="occupation">
-  <div class="title">Solution Architect, CM.com</div>
-  <div class="time">October 2021 - April 2022</div>
+  <div class="title">Product Owner</div>
+  <div class="timeAndPlace">May 2022 - September 2023 | CM.com</div>
 
   <div class="description">
     <p>
-      Pre and post sales technical consultancy and implementation of CM.com offerings, specialized in the Conversational AI Cloud. Cases ranged from standard implementations to projects with significant custom work. As a B2B company clients came from diverse sectors. Examples of those clients were Webhelp, Partou and the KNVB.
-    </p>
-  </div>
-
-  <div class="tags">
-    <div class="tag">JavaScript</div>
-    <div class="tag">REST</div>
-  </div>
-</div>
-
-<div class="occupation">
-  <div class="title">Senior Consultant, Creetion</div>
-  <div class="time">January 2021 - September 2021</div>
-
-  <div class="detailedActivity">Secondment to Mijnaansluiting.nl</div>
-  <div class="nestedTime">Januari 2021 - September 2021</div>
-
-  <div class="description">
-    <p>
-      Backend developer and helping hand for the frontend and automated test developers.
-    </p>
-  </div>
-
-  <div class="tags">
-    <div class="tag">JavaScript</div>
-    <div class="tag">TypeScript</div>
-    <div class="tag">Docker</div>
-    <div class="tag">REST</div>
-    <div class="tag">MongoDB</div>
-    <div class="tag">WebdriverIO</div>
-  </div>
-</div>
-
-<div class="occupation">
-  <div class="title">Manager, PwC</div>
-  <div class="time">Juni 2017 - December 2020</div>
-
-  <div class="description">
-    <p>
-      Manager in name, developer in practice. Worked on a single project, starting from scratch and up until the point it was an internationally used platform.
-    </p>
-
-    <p>
-      Development started with me being a one man team. Therefore I did everything that had to be done, including but not exclusive to determining a fitting architecture, building the backend and frontend, setting up a test suite, creating a CI/CD pipeline and adding integrations with other systems. Once more people joined the project two teams were created. One was responsible for the core platform and the other for implementing the business logic ran on top of the platform.
-    </p>
-
-    <p>
-      I developed as part of and guided the multidisciplinary team responsible for creating and maintaining the core platform. This was done in a DevOps fashion. We also provided guidance and support to the business logic team. At the same time I worked on mapping out the technical future of the platform.
-    </p>
-  </div>
-
-  <div class="tags">
-    <div class="tag">Java</div>
-    <div class="tag">JavaScript</div>
-    <div class="tag">TypeScript</div>
-    <div class="tag">Python</div>
-    <div class="tag">React</div>
-    <div class="tag">Redis</div>
-    <div class="tag">RabbitMQ</div>
-    <div class="tag">Docker</div>
-    <div class="tag">Kubernetes</div>
-    <div class="tag">Selenium</div>
-    <div class="tag">SQL</div>
-    <div class="tag">SQLite</div>
-    <div class="tag">REST</div>
-    <div class="tag">GraphQL</div>
-    <div class="tag">OpenFaaS</div>
-    <div class="tag">MarkLogic</div>
-    <div class="tag">Veracode</div>
-    <div class="tag">Black Duck</div>
-    <div class="tag">Jenkins</div>
-    <div class="tag">Go</div>
-  </div>
-</div>
-
-<div class="occupation">
-  <div class="title">Senior Software Engineer, Sogeti Netherlands</div>
-  <div class="time">Januari 2015 - May 2017</div>
-
-  <div class="detailedActivity">Secondment to PwC</div>
-  <div class="nestedTime">January 2015 - May 2017</div>
-
-  <div class="description">
-    <p>
-      Full-stack developer with a bit more focus on the frontend than the backend. Spent a lot of time with GoJS. Work ranged from creating a testing framework and setting up a frontend to creating and consuming APIs and doing maintenance and support on existing codebases.
-    </p>
-  </div>
-
-  <div class="tags">
-    <div class="tag">Java</div>
-    <div class="tag">JavaScript</div>
-    <div class="tag">HTML</div>
-    <div class="tag">CSS</div>
-    <div class="tag">LESS</div>
-    <div class="tag">React</div>
-    <div class="tag">MongoDB</div>
-    <div class="tag">REST</div>
-    <div class="tag">Selenium</div>
-    <div class="tag">Cucumber</div>
-  </div>
-
-  <div class="detailedActivity">Trainer Java</div>
-  <div class="nestedTime">February 2017 - April 2017</div>
-
-  <div class="description">
-    <p>
-      As part of a movement where test engineers were teached to write code I functioned as one of the persons who supervised them in their ambitions to become Oracle Certified Associate, Java SE 8 Programmer.
+      Roadmap development and monitoring for the realtime integrations platform
     </p>
   </div>
 </div>
 
 <div class="occupation">
-  <div class="title">Software Engineer, Sogeti Netherlands</div>
-  <div class="time">July 2012 - December 2014</div>
-
-  <div class="detailedActivity">Secondment to PwC</div>
-  <div class="nestedTime">November 2013 - December 2014</div>
+  <div class="title">Solution Architect</div>
+  <div class="timeAndPlace">October 2021 - April 2022 | CM.com</div>
 
   <div class="description">
     <p>
-      Got my first experiences with frontend development.
+      Pre and post sales technical consultancy for and implementation of CM.com offerings<br>
+      Example clients are Webhelp, Partou and the KNVB
     </p>
   </div>
+</div>
 
-  <div class="tags">
-    <div class="tag">JavaScript</div>
-    <div class="tag">HTML</div>
-    <div class="tag">CSS</div>
-  </div>
-
-  <div class="detailedActivity">Secondment to Nationale-Nederlanden</div>
-  <div class="nestedTime">December 2012 - September 2013</div>
+<div class="occupation">
+  <div class="title">Senior Consultant</div>
+  <div class="timeAndPlace">January 2021 - September 2021 | Creetion</div>
 
   <div class="description">
     <p>
-      Backend developer. Worked a lot with Aquima (renamed to Blueriq).
+      Secondment to Mijnaansluiting.nl
+    </p>
+    <p>
+      Full stack development using Node.js and React<br>
+      Automated testing implementation using WebdriverIO
     </p>
   </div>
+</div>
 
-  <div class="tags">
-    <div class="tag">Java</div>
+<div class="occupation">
+  <div class="title">Manager</div>
+  <div class="timeAndPlace">Juni 2017 - December 2020 | PwC</div>
+
+  <div class="description">
+    <p>
+      Spearheading development on a greenfield business logic automation application from proof of concept to international usage<br>
+      DevOps team guidance to work on the core platform in architecture, frontend, backend, CI/CD, integrations and test automation development
+    </p>
+    <p>
+      Notable software: Jenkins, Veracode, Black Duck, RabbitMQ, Docker
+    </p>
+  </div>
+</div>
+
+<div class="occupation">
+  <div class="title">Senior Software Engineer</div>
+  <div class="timeAndPlace">Januari 2015 - May 2017 | Sogeti Netherlands</div>
+
+  <div class="description">
+    <p>
+      Secondment to PwC
+    </p>
+    <p>
+      Full stack development using Java and JavaScript with GoJS and React<br>
+      Automated testing implementation using Selenium and Cucumber<br>
+      Training of test engineers to write code and become Oracle certified
+    </p>
+    <p>
+      Notable software: MongoDB
+    </p>
+  </div>
+</div>
+
+<div class="occupation">
+  <div class="title">Software Engineer</div>
+  <div class="timeAndPlace">July 2012 - December 2014 | Sogeti Netherlands</div>
+
+  <div class="description">
+    <p>Secondments to Nationale-Nederlanden and PwC</p>
+    <p>Full stack development using Java, HTML, CSS and JavaScript</p>
+    <p>Notable software: Aquima (Blueriq)</p>
   </div>
 </div>
 
@@ -387,29 +245,23 @@
 
 <div class="occupation">
   <div class="title">Computer Science</div>
-  <div class="time">2008 - 2012</div>
-
-  <div class="detailedActivity">Bachelor, Avans Hogeschool</div>
+  <div class="timeAndPlace">2008 - 2012 | Avans Hogeschool</div>
 
   <div class="description">
-    <ul>
-      <li>Member of the education committee.</li>
-      <li>Third year internship at Indicia.</li>
-      <li>Fourth year internship at Sogeti Netherlands.</li>
-    </ul>
+    <p>
+      Bachelor, education committee member, internships at Indicia and Sogeti Netherlands
+    </p>
   </div>
 </div>
 
 <div class="occupation">
   <div class="title">Nature & Health</div>
-  <div class="time">2001 - 2007</div>
-  
-  <div class="detailedActivity">Atheneum, Markland College</div>
+  <div class="timeAndPlace">2001 - 2007 | Markland College</div>
 
   <div class="description">
-    <ul>
-      <li>Elective German 1,2.</li>
-    </ul>
+    <p>
+      Atheneum, elective German 1, 2
+    </p>
   </div>
 </div>
 
