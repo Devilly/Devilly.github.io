@@ -50,6 +50,12 @@
     font-size: .8em;
   }
 
+  .details {
+    font-size: .9em;
+    font-style: italic;
+    margin: 0px;
+  }
+
   a.certificate,
   div.certificate {
     text-decoration: none;
@@ -65,18 +71,17 @@
     margin-bottom: 2em;
   }
 
-  div.occupation > div.timeAndPlace {
-    font-size: .9em;
-    font-style: italic;
-  }
-
-  div.occupation > div.timeAndPlace::after {
+  div.occupation > div.details::after {
     content: ";"
   }
 
   div.occupation > div.description > p {
     margin-top: .5em;
     margin-bottom: 0em;
+  }
+
+  div.occupation > div.description > p.software::before {
+    content: "Notable software: "
   }
 
   a.email {
@@ -110,12 +115,131 @@
 
 <h1>Dennis van Oosterhout</h1>
 
-<div>All-round software creator</div>
+<p>All-round software creator</p>
+<p class="details">Nationality: Dutch</p>
+<p class="details">Driver's license: B</p>
 
 <h2>About</h2>
 
 <p>Software creation is my profession as well as a hobby of mine. I am interested in the vision, implementation and testing of the product at hand.</p>
 <p>When not busy with software I like to watch series and movies, play (board) games, read a bit, do sports, and enjoy time with family and friends.</p>
+
+<h2>Experience</h2>
+
+<div class="occupation">
+  <div class="title">Senior Product Owner</div>
+  <div class="details">October 2023 - Present | CM.com</div>
+
+  <div class="description">
+    <p>
+      Roadmap development and monitoring for the realtime integrations platform, facilitating technical alignment between teams
+    </p>
+    <p>
+      Development of an end-to-end testing suite based on Node.js, Playwright and Appium; tests cover and combine frontend, backend and mobile across multiple CM.com applications while metrics are stored to gain insights over time
+    </p>
+    <p class="software">
+      PostgreSQL, Docker, Jira, Jira Product Discovery, GitHub, Bruno
+    </p>
+  </div>
+</div>
+
+<div class="occupation">
+  <div class="title">Product Owner</div>
+  <div class="details">May 2022 - September 2023 | CM.com</div>
+
+  <div class="description">
+    <p>
+      Roadmap development and monitoring for the realtime integrations platform
+    </p>
+    <p class="software">
+      GitLab, Jira, Insomnia
+    </p>
+  </div>
+</div>
+
+<div class="occupation">
+  <div class="title">Solution Architect</div>
+  <div class="details">October 2021 - April 2022 | CM.com</div>
+
+  <div class="description">
+    <p>
+      Pre and post sales technical consultancy for and implementation of CM.com offerings<br>
+      Example clients are Webhelp, Partou and the KNVB
+    </p>
+    <p class="software">
+      GitLab, Postman
+    </p>
+  </div>
+</div>
+
+<div class="occupation">
+  <div class="title">Senior Consultant</div>
+  <div class="details">January 2021 - September 2021 | Creetion</div>
+
+  <div class="description">
+    <p>
+      Secondment to Mijnaansluiting.nl
+    </p>
+    <p>
+      Full stack development using Node.js and React<br>
+      Automated testing implementation using WebdriverIO
+    </p>
+    <p class="software">
+       GitLab
+    </p>
+  </div>
+</div>
+
+<div class="occupation">
+  <div class="title">Manager</div>
+  <div class="details">Juni 2017 - December 2020 | PwC</div>
+
+  <div class="description">
+    <p>
+      Spearheading development on a greenfield business logic automation application from proof of concept to international usage<br>
+      DevOps team guidance to work on the core platform in architecture, frontend, backend, CI/CD, integrations and test automation development
+    </p>
+    <p class="software">
+      Jenkins, Veracode, Black Duck, RabbitMQ, Docker
+    </p>
+  </div>
+</div>
+
+<div class="occupation">
+  <div class="title">Senior Software Engineer</div>
+  <div class="details">January 2015 - May 2017 | Sogeti Netherlands</div>
+
+  <div class="description">
+    <p>
+      Secondment to PwC
+    </p>
+    <p>
+      Full stack development using Java and JavaScript with GoJS and React<br>
+      Automated testing implementation using Selenium and Cucumber<br>
+      Training of test engineers to write code and become Oracle certified
+    </p>
+    <p class="software">
+      MongoDB, Selenium Grid
+    </p>
+  </div>
+</div>
+
+<div class="occupation">
+  <div class="title">Software Engineer</div>
+  <div class="details">July 2012 - December 2014 | Sogeti Netherlands</div>
+
+  <div class="description">
+    <p>
+      Secondments to Nationale-Nederlanden and PwC
+    </p>
+    <p>
+      Full stack development using Java, HTML, CSS and JavaScript
+    </p>
+    <p class="software">
+      Aquima (Blueriq)
+    </p>
+  </div>
+</div>
 
 <h2>Certifications</h2>
 
@@ -139,113 +263,11 @@
   Developer</a>,
 <a class="certificate" href="java-se6.pdf">Oracle Certified Professional, Java SE 6 Programmer</a>
 
-<h2>Experience</h2>
-
-<div class="occupation">
-  <div class="title">Senior Product Owner</div>
-  <div class="timeAndPlace">October 2023 - Present | CM.com</div>
-
-  <div class="description">
-    <p>
-      Roadmap development and monitoring for the realtime integrations platform, facilitating technical alignment between teams
-    </p>
-    <p>
-      Development of an end-to-end testing suite based on Node.js, Playwright and Appium; tests cover and combine frontend, backend and mobile across multiple CM.com applications while metrics are stored to gain insights over time
-    </p>
-    <p>
-      Notable software: PostgreSQL
-    </p>
-  </div>
-</div>
-
-<div class="occupation">
-  <div class="title">Product Owner</div>
-  <div class="timeAndPlace">May 2022 - September 2023 | CM.com</div>
-
-  <div class="description">
-    <p>
-      Roadmap development and monitoring for the realtime integrations platform
-    </p>
-  </div>
-</div>
-
-<div class="occupation">
-  <div class="title">Solution Architect</div>
-  <div class="timeAndPlace">October 2021 - April 2022 | CM.com</div>
-
-  <div class="description">
-    <p>
-      Pre and post sales technical consultancy for and implementation of CM.com offerings<br>
-      Example clients are Webhelp, Partou and the KNVB
-    </p>
-  </div>
-</div>
-
-<div class="occupation">
-  <div class="title">Senior Consultant</div>
-  <div class="timeAndPlace">January 2021 - September 2021 | Creetion</div>
-
-  <div class="description">
-    <p>
-      Secondment to Mijnaansluiting.nl
-    </p>
-    <p>
-      Full stack development using Node.js and React<br>
-      Automated testing implementation using WebdriverIO
-    </p>
-  </div>
-</div>
-
-<div class="occupation">
-  <div class="title">Manager</div>
-  <div class="timeAndPlace">Juni 2017 - December 2020 | PwC</div>
-
-  <div class="description">
-    <p>
-      Spearheading development on a greenfield business logic automation application from proof of concept to international usage<br>
-      DevOps team guidance to work on the core platform in architecture, frontend, backend, CI/CD, integrations and test automation development
-    </p>
-    <p>
-      Notable software: Jenkins, Veracode, Black Duck, RabbitMQ, Docker
-    </p>
-  </div>
-</div>
-
-<div class="occupation">
-  <div class="title">Senior Software Engineer</div>
-  <div class="timeAndPlace">Januari 2015 - May 2017 | Sogeti Netherlands</div>
-
-  <div class="description">
-    <p>
-      Secondment to PwC
-    </p>
-    <p>
-      Full stack development using Java and JavaScript with GoJS and React<br>
-      Automated testing implementation using Selenium and Cucumber<br>
-      Training of test engineers to write code and become Oracle certified
-    </p>
-    <p>
-      Notable software: MongoDB
-    </p>
-  </div>
-</div>
-
-<div class="occupation">
-  <div class="title">Software Engineer</div>
-  <div class="timeAndPlace">July 2012 - December 2014 | Sogeti Netherlands</div>
-
-  <div class="description">
-    <p>Secondments to Nationale-Nederlanden and PwC</p>
-    <p>Full stack development using Java, HTML, CSS and JavaScript</p>
-    <p>Notable software: Aquima (Blueriq)</p>
-  </div>
-</div>
-
 <h2>Education</h2>
 
 <div class="occupation">
   <div class="title">Computer Science</div>
-  <div class="timeAndPlace">2008 - 2012 | Avans Hogeschool</div>
+  <div class="details">2008 - 2012 | Avans Hogeschool</div>
 
   <div class="description">
     <p>
@@ -256,7 +278,7 @@
 
 <div class="occupation">
   <div class="title">Nature & Health</div>
-  <div class="timeAndPlace">2001 - 2007 | Markland College</div>
+  <div class="details">2001 - 2007 | Markland College</div>
 
   <div class="description">
     <p>
@@ -269,17 +291,19 @@
 
 <a href="" class="email" data-email-address="ZHYub29zdGVyaG91dC5kZXZlbG9wbWVudEBnbWFpbC5jb20="></a>
 
+<footer>
+  Please visit https://devilly.github.io for the latest version of this curriculum vitae.
+</footer>
+
 <script>
   // Some detour to confuse simple scrapers.
-
   const emailContainer = document.querySelector('.email');
   const emailAddressEncoded = emailContainer.getAttribute('data-email-address');
   const emailAddressDecoded = atob(emailAddressEncoded);
   emailContainer.innerHTML = emailAddressDecoded;
   emailContainer.setAttribute('href', `mailto:${emailAddressDecoded}`);
-</script>
 
-<script>
+  // Set a rondom image
   const portraitElement = document.querySelector('.portrait');
 
   const profileImages = [{
@@ -309,8 +333,22 @@
 
   portraitElement.style.backgroundImage = `url(${chosenImage.image})`;
   portraitElement.style.backgroundPosition = chosenImage.position;
-</script>
 
-<footer>
-  Please visit https://devilly.github.io for the latest version of this curriculum vitae.
-</footer>
+  // Disable links on print
+  let urls = document.querySelectorAll("a");
+
+  window.addEventListener("beforeprint", function () {
+    urls.forEach(link => {
+      link.dataset.href = link.href;
+      link.removeAttribute("href");
+    });
+  });
+
+  window.addEventListener("afterprint", function () {
+    urls.forEach(link => {
+      if (link.dataset.href) {
+        link.href = link.dataset.href;
+      }
+    });
+  });
+</script>
