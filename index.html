@@ -50,12 +50,6 @@
     font-size: .8em;
   }
 
-  .details {
-    font-size: .9em;
-    font-style: italic;
-    margin: 0px;
-  }
-
   a.certificate,
   div.certificate {
     text-decoration: none;
@@ -68,11 +62,24 @@
   }
 
   div.occupation {
-    margin-bottom: 2em;
+    margin-bottom: 1em;
   }
 
   div.occupation > div.details::after {
     content: ";"
+  }
+
+  div.occupation > div.title {
+    font-size: 1.1em;
+  }
+
+  div.occupation > div.details {
+    font-size: .9em;
+    font-style: italic;
+  }
+
+  div.occupation > div.description {
+    margin-left: 1em;
   }
 
   div.occupation > div.description > p {
@@ -272,19 +279,14 @@
 
 <h2>Certifications</h2>
 
-<h3>Agile</h3>
 <a class="certificate" href="Professional Scrum Product Owner I.pdf">Professional Scrum Product Owner I</a>,
 <a class="certificate" href="Professional Scrum Master I.pdf">Professional Scrum Master I</a>,
-<span class="certificate">Agile Foundation</span>
-
-<h3>Architecture</h3>
+<span class="certificate">Agile Foundation</span>,
 <span class="certificate">TOGAF® 9 Foundation</span>,
 <a class="certificate" href="togaf9-1.pdf">TOGAF® 9 Certified</a>,
 <a class="certificate" href="cloud-computing-foundation.pdf">Cloud Computing Foundation</a>,
 <a class="certificate" href="information-security-foundation.pdf">Information Security Foundation</a>,
-<a class="certificate" href="tmap.pdf">TMap NEXT Test Engineer</a>
-
-<h3>Programming</h3>
+<a class="certificate" href="tmap.pdf">TMap NEXT Test Engineer</a>,
 <a class="certificate" href="Certificate_2.pdf">Programming in HTML5 with JavaScript and CSS3</a>,
 <a class="certificate" href="Certificate_1.pdf">Microsoft Certified Professional</a>,
 <a class="certificate" href="java-jpa.pdf">Oracle Certified Expert, Java EE 6 Java Persistence API Developer</a>,
